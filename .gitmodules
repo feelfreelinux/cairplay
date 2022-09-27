@@ -1,0 +1,3 @@
+[submodule "cairplay/bell"]
+	path = cairplay/bell
+	url = https://github.com/feelfreelinux/bell.git

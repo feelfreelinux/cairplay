@@ -1,0 +1,55 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lSystem
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Library/Developer/CommandLineTools/usr/bin/c++ 
+Build flags: 
+Id flags:  
+
+The output was:
+1
+ld: library not found for -lc++
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+Determining if the include file cpuid.h exists failed with the following output:
+Change Dir: /Users/cspot/clones/cairplay/targets/cli/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/homebrew/bin/ninja cmTC_15975 && [1/2] Building C object CMakeFiles/cmTC_15975.dir/CheckIncludeFile.c.o
+FAILED: CMakeFiles/cmTC_15975.dir/CheckIncludeFile.c.o 
+/Library/Developer/CommandLineTools/usr/bin/cc   -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_15975.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_15975.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_15975.dir/CheckIncludeFile.c.o -c /Users/cspot/clones/cairplay/targets/cli/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+In file included from /Users/cspot/clones/cairplay/targets/cli/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:
+/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/cpuid.h:14:2: error: this header is for x86 only
+#error this header is for x86 only
+ ^
+/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/cpuid.h:286:5: error: invalid output constraint '=a' in asm
+    __cpuid(__leaf, __eax, __ebx, __ecx, __edx);
+    ^
+/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/cpuid.h:251:11: note: expanded from macro '__cpuid'
+        : "=a"(__eax), "=r" (__ebx), "=c"(__ecx), "=d"(__edx) \
+          ^
+/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/cpuid.h:301:5: error: invalid output constraint '=a' in asm
+    __cpuid(__leaf, *__eax, *__ebx, *__ecx, *__edx);
+    ^
+/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/cpuid.h:251:11: note: expanded from macro '__cpuid'
+        : "=a"(__eax), "=r" (__ebx), "=c"(__ecx), "=d"(__edx) \
+          ^
+/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/cpuid.h:315:5: error: invalid output constraint '=a' in asm
+    __cpuid_count(__leaf, __subleaf, *__eax, *__ebx, *__ecx, *__edx);
+    ^
+/Library/Developer/CommandLineTools/usr/lib/clang/13.1.6/include/cpuid.h:258:11: note: expanded from macro '__cpuid_count'
+        : "=a"(__eax), "=r" (__ebx), "=c"(__ecx), "=d"(__edx) \
+          ^
+4 errors generated.
+ninja: build stopped: subcommand failed.
+
+
+
